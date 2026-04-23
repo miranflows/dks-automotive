@@ -1129,42 +1129,20 @@ p { color: var(--gray-600); line-height: 1.75; }
 }
 .lightbox-date { color: rgba(255,255,255,.4); font-size: .78rem; margin: 0; }
 
-/* --- Facebook Kaart --------------------------------------- */
-.fb-card {
+/* --- Facebook Tijdlijn ------------------------------------ */
+.fb-timeline-wrap {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  background: var(--white);
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
   border-radius: var(--radius-lg);
-  padding: 24px 28px;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 2px 16px rgba(0,0,0,.07);
-  transition: box-shadow var(--dur), transform var(--dur);
-  color: var(--black);
+  box-shadow: 0 2px 24px rgba(0,0,0,.08);
 }
-.fb-card:hover {
-  box-shadow: 0 6px 28px rgba(0,0,0,.13);
-  transform: translateY(-2px);
+.fb-timeline-wrap .fb-page,
+.fb-timeline-wrap iframe {
+  width: 100% !important;
+  min-width: 100% !important;
 }
-.fb-card-icon {
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  background: #1877f2;
-  color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-.fb-card-icon svg { width: 26px; height: 26px; }
-.fb-card-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.fb-card-text strong { font-size: 1rem; font-weight: 700; }
-.fb-card-text span { font-size: .85rem; color: var(--gray-400); }
-.fb-card-arrow { color: var(--gray-400); flex-shrink: 0; }
 
 /* --- Contact Pagina --------------------------------------- */
 /* Mobiel: gestapeld; desktop: naast elkaar */
