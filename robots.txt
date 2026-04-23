@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Blokkeer CMS-admin voor zoekmachines
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.dksautomotive.nl/sitemap.xml

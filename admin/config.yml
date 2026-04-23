@@ -1,0 +1,93 @@
+# ============================================================
+# Decap CMS Configuratie — DKS Automotive
+# ============================================================
+#
+# SETUP-INSTRUCTIES:
+# 1. Vervang 'JOUW-GITHUB-GEBRUIKERSNAAM' met uw GitHub-gebruikersnaam
+# 2. Vervang 'JOUW-REPO-NAAM' met de naam van uw GitHub-repository
+# 3. Configureer OAuth via Cloudflare Pages (zie documentatie):
+#    https://decapcms.org/docs/cloudflare-pages/
+# ============================================================
+
+backend:
+  name: github
+  repo: miranflows/dks-automotive
+  branch: main
+  base_url: https://api.netlify.com
+
+# Opslag van geüploade afbeeldingen
+media_folder: "images/galerij"
+public_folder: "/images/galerij"
+
+# Lokale ontwikkeling (uncomment voor lokaal testen):
+# local_backend: true
+
+# Taalinstellingen
+locale: nl
+
+collections:
+  - name: "galerij"
+    label: "Galerij"
+    label_singular: "Galerij-item"
+    folder: "content/galerij"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{titel}}"
+    sortable_fields: ["datum", "titel"]
+    view_filters:
+      - label: "Alle items"
+        field: "titel"
+        pattern: ""
+    fields:
+      - label: "Titel"
+        name: "titel"
+        widget: "string"
+        hint: "Korte, beschrijvende titel voor de foto (bijv. 'Distributieketting VW Golf')"
+        required: true
+
+      - label: "Beschrijving"
+        name: "beschrijving"
+        widget: "text"
+        hint: "Optionele beschrijving van het werk of de reparatie"
+        required: false
+
+      - label: "Foto's"
+        name: "fotos"
+        widget: "list"
+        hint: "Voeg één of meerdere foto's toe van het werk (aanbevolen: minimaal 800×600 px, max. 5 MB per foto)"
+        required: true
+        field:
+          label: "Foto"
+          name: "foto"
+          widget: "image"
+          media_library:
+            config:
+              max_file_size: 5242880  # 5 MB in bytes
+
+      - label: "Categorie"
+        name: "categorie"
+        widget: "select"
+        options:
+          - { label: "Distributieketting", value: "distributie" }
+          - { label: "Motor & DSG", value: "motor" }
+          - { label: "Diagnose & Reparatie", value: "diagnose" }
+          - { label: "Onderhoud", value: "onderhoud" }
+          - { label: "Overig", value: "overig" }
+        default: "overig"
+        required: false
+
+      - label: "Datum"
+        name: "datum"
+        widget: "datetime"
+        date_format: "DD-MM-YYYY"
+        time_format: false
+        format: "YYYY-MM-DD"
+        default: ""
+        required: false
+
+      - label: "Gepubliceerd"
+        name: "gepubliceerd"
+        widget: "boolean"
+        default: true
+        hint: "Schakel uit om dit item te verbergen zonder het te verwijderen"
