@@ -1141,6 +1141,16 @@ p { color: var(--gray-600); line-height: 1.75; }
 .fb-timeline-wrap iframe {
   display: block !important;
 }
+@media (min-width: 768px) {
+  .fb-timeline-wrap {
+    width: 750px;
+    height: 1050px;
+  }
+  .fb-timeline-wrap .fb-page {
+    transform: scale(1.5);
+    transform-origin: top left;
+  }
+}
 .fb-fallback {
   display: flex;
   align-items: center;
