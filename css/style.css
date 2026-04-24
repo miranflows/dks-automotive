@@ -1142,6 +1142,13 @@ p { color: var(--gray-600); line-height: 1.75; }
 .fb-timeline-wrap iframe {
   width: 100% !important;
   min-width: 100% !important;
+  max-width: 100% !important;
+}
+@media (min-width: 768px) {
+  .fb-timeline-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+  }
 }
 .fb-fallback {
   display: flex;
