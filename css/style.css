@@ -1131,26 +1131,15 @@ p { color: var(--gray-600); line-height: 1.75; }
 
 /* --- Facebook Tijdlijn ------------------------------------ */
 .fb-timeline-wrap {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: 0 2px 24px rgba(0,0,0,.08);
-  position: relative;
+  width: fit-content;
+  margin: 0 auto;
 }
 .fb-timeline-wrap .fb-page,
 .fb-timeline-wrap iframe {
-  width: calc(100% + 18px) !important;
-  min-width: calc(100% + 18px) !important;
-  max-width: calc(100% + 18px) !important;
-  margin-right: -18px;
-}
-@media (min-width: 768px) {
-  .fb-timeline-wrap {
-    max-width: 680px;
-    margin: 0 auto;
-  }
+  display: block !important;
 }
 .fb-fallback {
   display: flex;
