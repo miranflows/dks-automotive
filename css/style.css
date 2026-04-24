@@ -1143,6 +1143,49 @@ p { color: var(--gray-600); line-height: 1.75; }
   width: 100% !important;
   min-width: 100% !important;
 }
+.fb-fallback {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f0f2f5;
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  width: 100%;
+  color: #1c1e21;
+  transition: background var(--dur);
+}
+.fb-fallback:hover { background: #e4e6ea; }
+.fb-fallback-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #1877f2;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.fb-fallback-icon svg { width: 28px; height: 28px; }
+.fb-fallback-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.fb-fallback-text strong { font-size: 1rem; font-weight: 700; }
+.fb-fallback-text span { font-size: .85rem; color: #65676b; }
+.fb-fallback-btn {
+  background: #1877f2;
+  color: #fff;
+  font-size: .875rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+@media (max-width: 500px) {
+  .fb-fallback { flex-wrap: wrap; }
+  .fb-fallback-btn { width: 100%; text-align: center; }
+}
 
 /* --- Contact Pagina --------------------------------------- */
 /* Mobiel: gestapeld; desktop: naast elkaar */
