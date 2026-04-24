@@ -1143,11 +1143,11 @@ p { color: var(--gray-600); line-height: 1.75; }
 }
 @media (min-width: 768px) {
   .fb-timeline-wrap {
-    width: 750px;
-    height: 1050px;
+    width: 600px;
+    height: 840px;
   }
   .fb-timeline-wrap .fb-page {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transform-origin: top left;
   }
 }
