@@ -627,6 +627,13 @@ p { color: var(--gray-600); line-height: 1.75; }
   inset: 0;
   background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-100) 100%);
 }
+.about-image-real {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
 
 .about-badge {
   position: absolute;
