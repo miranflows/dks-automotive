@@ -1137,12 +1137,14 @@ p { color: var(--gray-600); line-height: 1.75; }
   overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: 0 2px 24px rgba(0,0,0,.08);
+  position: relative;
 }
 .fb-timeline-wrap .fb-page,
 .fb-timeline-wrap iframe {
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
+  width: calc(100% + 18px) !important;
+  min-width: calc(100% + 18px) !important;
+  max-width: calc(100% + 18px) !important;
+  margin-right: -18px;
 }
 @media (min-width: 768px) {
   .fb-timeline-wrap {
