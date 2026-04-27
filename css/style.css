@@ -1144,6 +1144,27 @@ p { color: var(--gray-600); line-height: 1.75; }
 .lightbox-date { color: rgba(255,255,255,.4); font-size: .78rem; margin: 0; }
 
 /* --- Facebook Tijdlijn ------------------------------------ */
+.google-photos-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  color: #3c4043;
+  font-family: var(--font);
+  font-size: .95rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.10);
+  text-decoration: none;
+  transition: box-shadow .2s ease, background .2s ease;
+}
+.google-photos-btn:hover {
+  background: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+
 .fb-timeline-wrap {
   overflow: hidden;
   border-radius: var(--radius-lg);
