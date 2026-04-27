@@ -1146,13 +1146,15 @@ p { color: var(--gray-600); line-height: 1.75; }
 /* --- Facebook Tijdlijn ------------------------------------ */
 .gallery-platform-cards {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 16px;
   margin: 32px 0;
 }
+@media (min-width: 640px) {
+  .gallery-platform-cards { flex-direction: row; }
+}
 .platform-card {
-  max-width: 480px;
-  width: 100%;
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 16px;
