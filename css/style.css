@@ -141,9 +141,22 @@ p { color: var(--gray-600); line-height: 1.75; }
   .btn-primary:hover { background: var(--gray-800); box-shadow: var(--shadow); }
 }
 
-/* Plan een afspraak knop in hero: zelfde rand als outline-white */
+/* Hero knoppen: wit met zwarte tekst */
 .hero .btn-primary {
-  border: 2px solid rgba(255,255,255,.4);
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--white);
+}
+@media (hover: hover) {
+  .hero .btn-primary:hover { background: var(--gray-100); box-shadow: none; }
+}
+.hero .btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+@media (hover: hover) {
+  .hero .btn-outline-white:hover { background: rgba(255,255,255,.15); }
 }
 
 .btn-outline { background: transparent; color: var(--black); border: 2px solid var(--black); }
