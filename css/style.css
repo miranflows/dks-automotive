@@ -1144,6 +1144,45 @@ p { color: var(--gray-600); line-height: 1.75; }
 .lightbox-date { color: rgba(255,255,255,.4); font-size: .78rem; margin: 0; }
 
 /* --- Facebook Tijdlijn ------------------------------------ */
+.gallery-platform-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0;
+}
+@media (min-width: 640px) {
+  .gallery-platform-cards { flex-direction: row; }
+}
+.platform-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--gray-50, #f9f9f9);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  text-decoration: none;
+  color: var(--black);
+  transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.platform-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.10); transform: translateY(-2px); }
+.platform-card-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.platform-card-text { flex: 1; }
+.platform-card-text strong { display: block; font-size: 1rem; margin-bottom: 2px; }
+.platform-card-text span { font-size: .85rem; color: var(--gray-500); }
+.platform-card-btn {
+  font-size: .85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--black);
+}
+
 .google-photos-btn {
   display: inline-flex;
   align-items: center;

@@ -73,20 +73,40 @@
 <!-- FACEBOOK FEED -->
 <section class="section" aria-labelledby="gallery-heading">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header text-center">
       <span class="label">Ons werk</span>
       <h2 id="gallery-heading">Vakkundig uitgevoerd</h2>
       <p>Bekijk foto's van ons werk op Google, of volg onze Facebook-pagina voor de laatste updates en werkzaamheden.</p>
-      <a href="https://maps.app.goo.gl/r89xkyLkZTTq8bSX8" target="_blank" rel="noopener" class="google-photos-btn" style="margin-top:20px;">
-        <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true">
-          <path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-          <path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-          <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-          <path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-        </svg>
-        Bekijk foto's van ons werk op Google
+    </div>
+
+    <div class="gallery-platform-cards">
+      <a href="https://maps.app.goo.gl/r89xkyLkZTTq8bSX8" target="_blank" rel="noopener" class="platform-card">
+        <div class="platform-card-icon" style="background:#fff; border:1px solid #dadce0;">
+          <svg width="28" height="28" viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+            <path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+            <path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+          </svg>
+        </div>
+        <div class="platform-card-text">
+          <strong>Foto's op Google</strong>
+          <span>Bekijk ons werk via Google Maps</span>
+        </div>
+        <div class="platform-card-btn">Bekijken →</div>
+      </a>
+      <a href="https://www.facebook.com/DKSAutomotive10/" target="_blank" rel="noopener" class="platform-card">
+        <div class="platform-card-icon" style="background:#1877F2;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </div>
+        <div class="platform-card-text">
+          <strong>Volg ons op Facebook</strong>
+          <span>Laatste updates en werkzaamheden</span>
+        </div>
+        <div class="platform-card-btn">Volgen →</div>
       </a>
     </div>
+
     <div class="fb-timeline-wrap">
       <div id="fb-root"></div>
       <script async defer crossorigin="anonymous" src="https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v19.0"></script>
